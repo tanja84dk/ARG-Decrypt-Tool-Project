@@ -22,13 +22,13 @@ while option != 0:
             if option_encode == 1:
                 # From String
                 encoded_man_input = input("String to encode: ")
-                encoder.encode_input_base64(encoded_man_input, 'encoded_out.txt') 
+                encoder.encode_input_base64(encoded_man_input, 'base64_encoded_out.txt') 
                 option_encode = 0
 
             elif option_encode == 2:
                 # From File
                 encoder_plain = input("Type the full file name, has to end with .txt and no spaces: ")
-                encoder.encode_file_base64(encoder_plain, "output.txt")
+                encoder.encode_file_base64(encoder_plain, "base64_encoded_out.txt")
                 option_encode = 0
             else:
                 print("Wrong Choice of encoding")
