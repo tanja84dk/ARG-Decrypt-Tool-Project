@@ -12,7 +12,8 @@ option = int(input("Enter your option: "))
 
 while option != 0:
     if option == 1:
-        
+        # Encoding
+
         # Sub Menu
         print(" [1] From input (Only one line): ")
         print(" [2] From File: ")
@@ -32,11 +33,8 @@ while option != 0:
             else:
                 print("Wrong Choice of encoding")
 
-        # print("Encoding")
-        # encoder.encode_base64("decoded.txt")
-
     elif option == 2:
-        print("Decoding")
+        # Decoding
         
         # Sub Menu
         print(" [1] From input: ")
@@ -49,8 +47,8 @@ while option != 0:
                 decoder.decode_input_base64(decode_man_input, 'manout.txt')
                 option_decode = 0
             elif option_decode == 2:
-                print("2. From File")
-                decoder.decode_file_base64("encoded.txt", "output.txt")
+                decode_text_file = input("Type the full file name, has to end with .txt and no spaces: ")
+                decoder.decode_file_base64(decode_text_file, "output.txt")
                 option_decode = 0
             else:
                 print("Issue")
