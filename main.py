@@ -4,8 +4,8 @@
 
 ## My Include Files
 from includes.menu import main as main_menu
-from includes import decoder
-from includes import encoder
+from includes import decoder, encoder
+# from includes import encoder
 
 main_menu()
 option = int(input("Enter your option: "))
@@ -23,8 +23,9 @@ while option != 0:
         option_decode = int(input("Choose Decoding: "))
         while option_decode != 0:
             if option_decode == 1:
-                print("Encoded String: ")
-                decoder.decode_input_base64()
+                decode_man_input = input("Encoded String: ")
+                # print("Encoded String: ")
+                decoder.decode_input_base64(decode_man_input, 'manout.txt')
                 option_decode = 0
             elif option_decode == 2:
                 print("2. From File")

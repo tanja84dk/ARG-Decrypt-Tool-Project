@@ -14,3 +14,4 @@ dev
 decoded.txt
 encoded.txt
 output.txt
+*.txt
