@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ## Imports
-import base64
+# import base64
 # from sys import argv
 # from os import path
 from os import listdir
