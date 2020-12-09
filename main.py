@@ -28,7 +28,7 @@ while option != 0:
                 option_decode = 0
             elif option_decode == 2:
                 print("2. From File")
-                decoder.decode_file_base64("encoded.txt")
+                decoder.decode_file_base64("encoded.txt", "output.txt")
                 option_decode = 0
             else:
                 print("Issue")
