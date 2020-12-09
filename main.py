@@ -2,8 +2,8 @@
 
 ## Imports
 import base64
-from sys import argv
-from os import path
+# from sys import argv
+# from os import path
 from os import listdir
 
 ## My Include Files
@@ -36,7 +36,7 @@ while option != 0:
         encoder.encode_base64()
     elif option == 2:
         print("Decoding")
-        decoder.decoder_base64()
+        decoder.decoder_base64("encoded.txt")
     elif option == 3:
         print("Number 3")
     elif option == 4:

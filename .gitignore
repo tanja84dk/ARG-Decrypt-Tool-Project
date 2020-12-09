@@ -10,3 +10,5 @@ gen
 .vs
 .vscode
 includes/__pycache__
+decoded.txt
+encoded.txt
