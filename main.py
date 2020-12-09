@@ -5,7 +5,6 @@
 ## My Include Files
 from includes.menu import main as main_menu
 from includes import decoder, encoder, debug
-# from includes import encoder
 
 main_menu()
 option = int(input("Enter your option: "))
