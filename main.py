@@ -4,7 +4,7 @@
 
 ## My Include Files
 from includes.menu import main as main_menu
-from includes import decoder, encoder
+from includes import decoder, encoder, debug
 # from includes import encoder
 
 main_menu()
@@ -12,8 +12,25 @@ option = int(input("Enter your option: "))
 
 while option != 0:
     if option == 1:
-        print("Encoding")
-        encoder.encode_base64("decoded.txt")
+        
+        # Sub Menu
+        print(" [1] From input (Only one line): ")
+        print(" [2] From File: ")
+        option_encode = int(input("Choose Encoding: "))
+        while option_encode != 0:
+            if option_encode == 1:
+                encoded_man_input = input("String to encode: ")
+                encoder.encode_input_base64(encoded_man_input, 'man_encoded_out.txt') 
+                option_encode = 0
+
+            elif option_encode == 2:
+                pass
+            else:
+                print("Wrong Choice of encoding")
+
+        # print("Encoding")
+        # encoder.encode_base64("decoded.txt")
+
     elif option == 2:
         print("Decoding")
         
