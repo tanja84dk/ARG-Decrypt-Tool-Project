@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-## Imports
+# Imports
 
-## My Include Files
+# My Include Files
 from includes.menu import main as main_menu
 from includes import decoder, encoder, debug
 
@@ -42,7 +42,7 @@ while option != 0:
         while option_decode != 0:
             if option_decode == 1:
                 decode_man_input = input("Encoded String: ")
-                # print("Encoded String: ")
+
                 decoder.decode_input_base64(decode_man_input, 'manout.txt')
                 option_decode = 0
             elif option_decode == 2:
