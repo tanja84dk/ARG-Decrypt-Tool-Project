@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 ## Imports
-# from os import listdir
 
 ## My Include Files
 from includes.menu import main as main_menu
@@ -17,11 +16,10 @@ while option != 0:
         encoder.encode_base64("decoded.txt")
     elif option == 2:
         print("Decoding")
-        # decoder.decoder_base64("encoded.txt")
         
+        # Sub Menu
         print(" [1] From input: ")
         print(" [2] From File: ")
-        
         option_decode = int(input("Choose Decoding: "))
         while option_decode != 0:
             if option_decode == 1:
@@ -36,9 +34,9 @@ while option != 0:
                 print("Issue")
 
     elif option == 3:
-        print("Number 3")
+        print("Number 3: Comming Soon")
     elif option == 4:
-        print("Number 4")
+        print("Number 4: Comming Soon")
     else:
         print("Invalid Option")
         main_menu()
