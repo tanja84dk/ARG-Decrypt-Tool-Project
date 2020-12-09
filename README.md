@@ -1,1 +1,3 @@
-# ARG-Decrypt-Tool-Project
+# ARG Decrypt Tool Project
+
+My small project creating a decrypting tool
