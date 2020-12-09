@@ -33,7 +33,7 @@ option = int(input("Enter your option: "))
 while option != 0:
     if option == 1:
         print("Encoding")
-        encoder.encode_base64()
+        encoder.encode_base64("decoded.txt")
     elif option == 2:
         print("Decoding")
         decoder.decoder_base64("encoded.txt")
