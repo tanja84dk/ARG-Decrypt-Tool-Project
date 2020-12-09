@@ -1,31 +1,12 @@
 #!/usr/bin/env python3
 
 ## Imports
-# import base64
-# from sys import argv
-# from os import path
-from os import listdir
+# from os import listdir
 
 ## My Include Files
 from includes.menu import main as main_menu
 from includes import decoder
 from includes import encoder
-
-## My Variables
-#arg1 = argv[1]
-#arg2 = argv[2]
-
-## My Functions
-
-# List a directory
-def dir_list(dir):
-    for f in listdir(dir):
-        print(f)
-
-
-## Example
-# folder = input("What folder would you like to print out? ")
-# dir_list(folder)
 
 main_menu()
 option = int(input("Enter your option: "))
