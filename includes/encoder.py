@@ -3,13 +3,13 @@
 import base64
 import datetime
 
-def encode_base64(x):
-    with open(x, 'r') as base64_decoded:
-        message = base64_decoded.read()
-        message_bytes = message.encode('ascii')
+def encode_base64(plain_file):
+    with open(plain_file, 'r') as base64_decoded:
+        plain_text = base64_decoded.read()
+        message_bytes = plain_text.encode('ascii')
         base64_bytes = base64.b64encode(message_bytes)
-        base64_message = base64_bytes.decode('ascii')
-    print(base64_message)
+        base64_encoded_message = base64_bytes.decode('ascii')
+    print(base64_encoded_message)
 
 def encode_file_base64(x, y):
     now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -22,12 +22,13 @@ def encode_file_base64(x, y):
             base64_encoded.write(message)
         print(message)
 
-def encode_input_base64(x, y):
+def encode_input_base64(plain_text, output_file):
+    "Plain Text is the indput. And output_file is output filename with date and time added to avoid overwrites"
     now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    message = x
-    message_bytes = message.encode('ascii')
+    pre_encode_message = plain_text
+    message_bytes = pre_encode_message.encode('ascii')
     base64_bytes = base64.b64encode(message_bytes)
     base64_message = base64_bytes.decode('ascii')
-    with open(now + '-' + y, 'w') as base64_input_encode:
+    with open(now + '-' + output_file, 'w') as base64_input_encode:
         base64_input_encode.write(base64_message)
     print(base64_message)
