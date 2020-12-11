@@ -8,9 +8,11 @@ with open("binaryin.plain", 'r') as file:
     print(type(new))
     with open("debuglist.txt", 'a+') as debug:
         debug.write(str(new))
+    
+#   Debug Printing Each Message With A Line Between
     print("Line Test")
     for line in new:
-        print(line)
+        print(line + "\n")
 #    print(new)
 #    count = 0
 #    for line in Lines:
