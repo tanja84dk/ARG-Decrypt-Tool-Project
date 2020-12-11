@@ -4,7 +4,6 @@
 
 # My Include Files
 from includes.menu import main as main_menu
-#from includes import encoderdev as encoder
 from includes import decoder, debug, encoder
 
 main_menu()
