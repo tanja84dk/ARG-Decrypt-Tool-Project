@@ -12,3 +12,5 @@ gen
 includes/__pycache__
 dev
 *.txt
+*dev.py
+testmain.py
