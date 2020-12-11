@@ -4,7 +4,7 @@
 
 # My Include Files
 from includes.menu import main as main_menu
-from includes import decoder, debug, encoder
+from includes import decoder, debug, encoder, binary8bit
 
 main_menu()
 option = int(input("Enter your option: "))
@@ -52,7 +52,7 @@ while option != 0:
                 print("Issue")
 
     elif option == 3:
-        print("Number 3: Comming Soon")
+        print("Number 3: Binary From File Comming Soon")
     elif option == 4:
         print("Number 4: Comming Soon")
     else:
