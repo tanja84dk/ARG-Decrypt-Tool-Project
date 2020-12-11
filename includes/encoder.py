@@ -29,5 +29,5 @@ def encode_input_base64(x, y):
     base64_bytes = base64.b64encode(message_bytes)
     base64_message = base64_bytes.decode('ascii')
     with open(now + '-' + y, 'w') as base64_input_encode:
-        base64_input_encode.write(message)
+        base64_input_encode.write(base64_message)
     print(base64_message)
