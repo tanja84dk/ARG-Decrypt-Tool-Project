@@ -8,6 +8,9 @@ with open("binaryin.plain", 'r') as file:
     print(type(new))
     with open("debuglist.txt", 'a+') as debug:
         debug.write(str(new))
+    print("Line Test")
+    for line in new:
+        print(line)
 #    print(new)
 #    count = 0
 #    for line in Lines:
