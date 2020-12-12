@@ -78,6 +78,8 @@ while option != 0:
         
         if submenu_8bit == 1:
             # Encode 8Bit From Plain Text File
+            non_8bittext_file = input("Type the full file name, has to end with .txt and no spaces: ")
+            ArgTool_binary8bit.encode_file_8bit(non_8bittext_file, f'8bit-encoded-{ non_8bittext_file }.txt')
             submenu_8bit = 0
         
         if submenu_8bit == 2:
