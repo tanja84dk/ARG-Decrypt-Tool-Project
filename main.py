@@ -4,7 +4,8 @@
 
 # My Include Files
 from includes.menu import main as main_menu
-from includes import debug, ArgTool_binary8bit, ArgTool_base64
+from includes import ArgTool_binary8bit, ArgTool_base64
+from debugfiles import debug
 
 main_menu()
 option = int(input("Enter your option: ") or '404')
