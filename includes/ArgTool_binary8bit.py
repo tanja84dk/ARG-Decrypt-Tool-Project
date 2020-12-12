@@ -9,7 +9,11 @@ def string2bits(s=''):
 def bits2string(b=None):
     return ''.join([chr(int(x, 2)) for x in b])
 
-def decoding(fileinput, fileoutput):
+def encode_file_8bit():
+    pass
+
+
+def decode_file_8bit(fileinput, fileoutput):
     with open(fileinput, 'r') as file_in:
         Lines = file_in.read()
         now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
