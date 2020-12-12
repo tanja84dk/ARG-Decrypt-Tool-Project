@@ -4,7 +4,7 @@
 
 # My Include Files
 from includes.menu import main as main_menu
-from includes import decoder, debug, encoder, ArgTool_binary8bit, ArgTool_base64
+from includes import debug, ArgTool_binary8bit, ArgTool_base64
 
 main_menu()
 option = int(input("Enter your option: ") or '404')
@@ -35,16 +35,24 @@ while option != 0:
         elif submenu_base64 == 2:
             # Decoding From File
             print("Input Filename On Encrypted File: ")
+            decode_text_file = input("Type the full file name, has to end with .txt and no spaces: ")
+            ArgTool_base64.decode_file_base64(decode_text_file, f"base64-decoded-{ decode_text_file }.txt")
             submenu_base64 = 0
         
         elif submenu_base64 == 3:
             # Encoding From String
             print("Enter String To Encode ( Only One Line ): ")
+            encoded_man_input = input("String to encode: ")
+            ArgTool_base64.encode_input_base64(encoded_man_input, 'base64_encoded_output.txt')
             submenu_base64 = 0
+            input("\n\n Press Enter To Contiue: ")
+
 
         elif submenu_base64 == 4:
             # Decoding From String
             print("Enter String To Decode ( Only One Line ): ")
+            decode_man_input = input("Encoded String: ")
+            ArgTool_base64.decode_input_base64(decode_man_input, 'base64-decoded-string.txt')
             submenu_base64 = 0
         
         elif submenu_base64 == 0:
@@ -57,7 +65,7 @@ while option != 0:
 
     elif option == 2:
         # 8Bit Sub Menu
-        print(" [1] Encoding From File: ")
+        print(" [1] Encoding From File ( Placeholder Comming Soon ): ")
         print(" [2] Decoding From File: ")
         print(" [9] Back To Main Menu: \n")
 
@@ -69,12 +77,13 @@ while option != 0:
             
         
         if submenu_8bit == 1:
-            pass
+            # Encode 8Bit From Plain Text File
+            submenu_8bit = 0
         
         if submenu_8bit == 2:
             # Decoding 8Bit Encoded Text File
             encoded_8bittext_file = input("Type the full file name, has to end with .txt and no spaces: ")
-            ArgTool_binary8bit.decoding(encoded_8bittext_file, f'8bit-decoded-{ encoded_8bittext_file }.txt')
+            ArgTool_binary8bit.decode_file_8bit(encoded_8bittext_file, f'8bit-decoded-{ encoded_8bittext_file }.txt')
             submenu_8bit = 0
         
         if submenu_8bit == 0:
@@ -85,30 +94,8 @@ while option != 0:
             print("/n Error Wrong Input. Try Again Please")
             submenu_base64 = 0
 
-
-    elif option == 3:
-        option_binary = int(input("Choose From List: ") or '404')
-        while option_binary != 0:
-            if option_binary == 1:
-                decoded_8bittext_file = input("Type the full file name, has to end with .txt and no spaces: ")
-                option_binary = 0
-            elif option_binary == 2:
-                print("Enter Encoded Filename: ")
-                encoded_8bittext_file = input("Type the full file name, has to end with .txt and no spaces: ")
-                ArgTool_binary8bit.decoding(encoded_8bittext_file, f'8bit-decoded-{ encoded_8bittext_file }.txt')
-                option_binary = 0
-            else:
-                print("Wrong Choice Try Again")
-                print(option_binary)
-                option_binary = int(input("Choose From List: ") or '404')
-
-        
-    elif option == 4:
-        print("Number 4: Comming Soon")
     else:
         print("Invalid Option")
-        main_menu()
-        option = int(input("Enter your option: "))
     
     print("\n\n")
     main_menu()
