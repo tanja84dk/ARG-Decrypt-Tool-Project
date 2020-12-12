@@ -11,6 +11,7 @@ gen
 .vscode
 __pycache__
 dev
+testfiles
 *.txt
 *dev.py
 testmain.py
