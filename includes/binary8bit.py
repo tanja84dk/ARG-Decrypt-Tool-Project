@@ -18,5 +18,5 @@ def decoding(fileinput, fileoutput):
             file_in_temp = line.replace(" ", "\n")
             file_in_temp = list(file_in_temp.split("\n"))
             text_out = bits2string(file_in_temp)
-            with open(f"output/{ now }-binarydecoded.txt", 'a+') as writefile:
+            with open(now + "-binarydecoded.txt", 'a+') as writefile:
                 writefile.write(text_out + "\n\n")
