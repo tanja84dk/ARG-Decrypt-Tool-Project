@@ -9,7 +9,10 @@ def string2bits(s=''):
 def bits2string(b=None):
     return ''.join([chr(int(x, 2)) for x in b])
 
+
+# My Functions
 def encode_file_8bit(fileinput, fileoutput):
+    "Plain Text is the indput. And output_file is output filename. Output file is prepended with date and time added to avoid overwrite"
     with open(fileinput, 'r') as file_in:
         Lines = file_in.read()
         now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -19,6 +22,7 @@ def encode_file_8bit(fileinput, fileoutput):
 
 
 def decode_file_8bit(fileinput, fileoutput):
+    "8Bit binary ASCII encoded text file is input. Output file is prepended with date and time added to avoid overwrite"
     with open(fileinput, 'r') as file_in:
         Lines = file_in.read()
         now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
