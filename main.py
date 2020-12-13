@@ -8,10 +8,10 @@ from includes import ArgTool_binary8bit, ArgTool_base64
 # from debugfiles import debug
 
 main_menu()
-option = int(input("Enter your option: ") or '404')
+main_menu_choise = int(input("Enter your option: ") or '404')
 
-while option != 0:
-    if option == 1:
+while main_menu_choise != 0:
+    if main_menu_choise == 1:
         # Base64 Sub Menu
         print(" [1] Encoding From File")
         print(" [2] Decoding From File")
@@ -64,7 +64,7 @@ while option != 0:
             print("/n Error Wrong Input. Try Again Please: ")
             submenu_base64 = 0
 
-    elif option == 2:
+    elif main_menu_choise == 2:
         # 8Bit Sub Menu
         print(" [1] Encoding From File ( Placeholder Comming Soon ): ")
         print(" [2] Decoding From File: ")
@@ -102,4 +102,4 @@ while option != 0:
     
     print("\n\n")
     main_menu()
-    option = int(input("Enter your option: ") or '404')
+    main_menu_choise = int(input("Enter your option: ") or '404')
