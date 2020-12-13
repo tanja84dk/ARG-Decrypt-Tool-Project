@@ -2,7 +2,7 @@
 
 My small project creating a decrypting tool to use in ARG ( Alternate Reality Game )
 
-At this time its only able to decrypt base64 encoded text but more to come
+At this time its only able to decrypt base64 and 8Bit binary encoded text but more to come
 
 > #### What does the tool?
 >
