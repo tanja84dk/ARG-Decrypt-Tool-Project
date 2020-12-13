@@ -17,7 +17,7 @@ def encode_file_8bit(fileinput, fileoutput):
         Lines = file_in.read()
         now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         file_in_temp = string2bits(Lines)
-        with open(now + fileoutput, 'a+') as writefile:
+        with open(now + "-" + fileoutput, 'a+') as writefile:
             writefile.write(str(' ').join(file_in_temp))
 
 
@@ -31,5 +31,5 @@ def decode_file_8bit(fileinput, fileoutput):
             file_in_temp = line.replace(" ", "\n")
             file_in_temp = list(file_in_temp.split("\n"))
             text_out = bits2string(file_in_temp)
-            with open(now + fileoutput, 'a+') as writefile:
+            with open(now + "-" + fileoutput, 'a+') as writefile:
                 writefile.write(text_out + "\n\n")
