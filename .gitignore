@@ -14,5 +14,3 @@ dev
 testfiles
 *.txt
 *dev.py
-testmain.py
-song.tmp
