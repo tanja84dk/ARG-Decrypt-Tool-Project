@@ -15,7 +15,7 @@ def encode_file_8bit(fileinput, fileoutput):
     "Plain Text is the indput. And output_file is output filename. Output file is prepended with date and time added to avoid overwrite"
     with open(fileinput, 'r') as file_in:
         Lines = file_in.read()
-        now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") # Timestamp Creation
         file_in_temp = string2bits(Lines)
         with open(now + "-" + fileoutput, 'a+') as writefile:
             writefile.write(str(' ').join(file_in_temp))
@@ -25,7 +25,7 @@ def decode_file_8bit(fileinput, fileoutput):
     "8Bit binary ASCII encoded text file is input. Output file is prepended with date and time added to avoid overwrite"
     with open(fileinput, 'r') as file_in:
         Lines = file_in.read()
-        now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") # Timestamp Creation
         file_in_temp = list(Lines.split("\n\n"))
         for line in file_in_temp:
             file_in_temp = line.replace(" ", "\n")

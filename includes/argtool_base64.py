@@ -5,7 +5,7 @@ import datetime
 
 def encode_file_base64(input_file, output_file):
     "Plain Text is the indput. And output_file is output filename. Output file is prepended with date and time added to avoid overwrite"
-    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") # Timestamp Creation
     with open(input_file, 'r') as pre_encode:
         pre_encode_message = pre_encode.read()
         pre_encode_bytes = pre_encode_message.encode('ascii')
@@ -17,7 +17,7 @@ def encode_file_base64(input_file, output_file):
 
 def encode_input_base64(plain_text, output_file):
     "Plain Text is the indput. Output file is prepended with date and time added to avoid overwrite"
-    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") # Timestamp Creation
     pre_encode_message = plain_text
     message_bytes = pre_encode_message.encode('ascii')
     base64_bytes = base64.b64encode(message_bytes)
@@ -28,7 +28,7 @@ def encode_input_base64(plain_text, output_file):
 
 def decode_file_base64(input_file, output_file):
     "Base64 encoded text file is input. Output file is prepended with date and time added to avoid overwrite"
-    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") # Timestamp Creation
     with open(input_file, 'r') as base64_encoded:
         base64_message = base64_encoded.readline().rstrip()
         base64_bytes = base64_message.encode('ascii')
@@ -40,7 +40,7 @@ def decode_file_base64(input_file, output_file):
 
 def decode_input_base64(string_input, output_file):
     "Base64 encoded text is the input from string. Output file is prepended with date and time added to avoid overwrite"
-    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") # Timestamp Creation
     base64_message = string_input
     base64_bytes = base64_message.encode('ascii')
     message_bytes = base64.b64decode(base64_bytes)
