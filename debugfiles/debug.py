@@ -8,3 +8,8 @@ def debugging(filename, debugmessage):
     message = str(debugmessage)
     with open("debuglogs/" + now + "-debug-" + filename + ".log", 'w+') as debug_log:
             debug_log.write(message)
+
+
+# Future Proof for only running if this file is run
+if __name__ == '__main__':
+    pass

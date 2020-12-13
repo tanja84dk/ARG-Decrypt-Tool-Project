@@ -48,3 +48,7 @@ def decode_input_base64(string_input, output_file):
     with open(now + '-' + output_file, 'w') as base64_input_decoded:
             base64_input_decoded.write(message)
     print(message)
+
+# Future Proof for only running if this file is run
+if __name__ == '__main__':
+    pass

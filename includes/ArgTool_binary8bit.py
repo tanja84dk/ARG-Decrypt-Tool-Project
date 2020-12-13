@@ -33,3 +33,9 @@ def decode_file_8bit(fileinput, fileoutput):
             text_out = bits2string(file_in_temp)
             with open(now + "-" + fileoutput, 'a+') as writefile:
                 writefile.write(text_out + "\n\n")
+
+
+
+# Future Proof for only running if this file is run
+if __name__ == '__main__':
+    pass

@@ -6,3 +6,8 @@ def main():
     print(" [3] Comming Soon")
     print(" [4] Comming Soon")
     print(" [0] Exit")
+
+
+# Future Proof for only running if this file is run
+if __name__ == '__main__':
+    pass
