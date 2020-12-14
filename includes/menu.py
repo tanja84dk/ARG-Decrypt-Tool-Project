@@ -41,5 +41,4 @@ def bin_menu():
 
 # Future Proof for only running if this file is run
 if __name__ == '__main__':
-    main_menu()
     pass
