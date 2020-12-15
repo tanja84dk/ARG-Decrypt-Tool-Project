@@ -12,6 +12,6 @@ gen
 __pycache__
 dev
 testfiles
-debuglogs/*.log
+*.log
 *.txt
 *dev.py
