@@ -32,7 +32,7 @@ def encode_file_base64(input_file, output_file):
         message = message_bytes.decode('ascii')
         with open(now + '-' + output_file, 'w') as base64_encoded:
             base64_encoded.write(message)
-        print(message)
+        print(f"The encoded message is saved in a file called { now }-{ output_file }")
 
 def encode_input_base64(plain_text, output_file):
     '''
@@ -46,7 +46,7 @@ def encode_input_base64(plain_text, output_file):
     base64_message = base64_bytes.decode('ascii')
     with open(now + '-' + output_file, 'w') as base64_input_encode:
         base64_input_encode.write(base64_message)
-    print(base64_message)
+    print(f"The encoded message is saved in a file called { now }-{ output_file }")
 
 def decode_file_base64(input_file, output_file):
     '''
@@ -64,7 +64,7 @@ def decode_file_base64(input_file, output_file):
             message = message_bytes.decode('ascii')
             with open(now + '-' + output_file, 'w') as base64_decoded:
                 base64_decoded.write(message)
-        print(message)
+        print(f"The decoded message is saved in a file called { now }-{ output_file }")
 
 def decode_input_base64(string_input, output_file):
     '''
@@ -78,7 +78,7 @@ def decode_input_base64(string_input, output_file):
     message = message_bytes.decode('ascii')
     with open(now + '-' + output_file, 'w') as base64_input_decoded:
             base64_input_decoded.write(message)
-    print(message)
+    print(f"The decoded message is saved in a file called { now }-{ output_file }")
 
 # Future Proof for only running if this file is run
 if __name__ == '__main__':
