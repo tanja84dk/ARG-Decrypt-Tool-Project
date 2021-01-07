@@ -9,6 +9,7 @@ out
 gen
 .vs
 .vscode
+.venv
 __pycache__
 dev
 testfiles
