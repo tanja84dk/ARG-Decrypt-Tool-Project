@@ -11,17 +11,10 @@ from includes import argtool_binary8bit, argtool_base64, argtool_common_funcs
 
 # Global Variables
 errorLog = "argtool.error.log"
-argver = ".version"
-
-def argtoolVersion():
-    with open(argver, 'r') as ver:
-        ver = ver.readline()
-    return ver
-
 
 def logToFile(logfile, logMessage):
             with open(logfile, 'a+') as logWriter:
-                logWriter.write(f"{argTools.timeStamp()} - {argtoolVersion()} - {logMessage}\n")
+                logWriter.write(f"{argTools.timeStamp()} - {argTools.argtoolVersion()} - {logMessage}\n")
 
 
 if __name__ == '__main__':
