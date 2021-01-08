@@ -2,7 +2,7 @@
 
 My small project creating a decrypting tool to use in ARG ( Alternate Reality Game )
 
-At this time its only able to decrypt base64 and 8Bit binary encoded text but more to come
+At this time its able to encrypt and decrypt base64 and 8Bit binary encoded text but more to come
 
 > #### What does the tool?
 >
@@ -14,6 +14,7 @@ At this time its only able to decrypt base64 and 8Bit binary encoded text but mo
 > - Menu option 1 Base64.  
 >   This is where the options for encoding or decoding Base64 text.  
 >   Possible both from single string file and a .txt file.
+>   The output is saved in a textfile in the folder you ran it from.
 > - Menu option 2 8Bit Binary.  
 >   This is where the options for encoding or decoding 8Bit Binary text.  
 >   Because of the length of 8Bit Binary strings its then only posible to encode and decode from a .txt file.  
