@@ -5,7 +5,10 @@ def remove_ext(fileinput):
     Removing everything after the last period in the string
     '''
     filename = '.'.join(fileinput.split(".")[:-1])
-    return filename
+    if len(filename) >= 1:
+        return filename
+    else:
+        return fileinput
 
 def try_read_file(filename):
     '''
