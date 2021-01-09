@@ -15,7 +15,7 @@ class MenusList:
         Printing the main menu list
         '''
 
-        print(f" ")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
         print(f" ARG Encrypt And Decrypt Tool")
         print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
         print(f" [1] Base64")
@@ -32,15 +32,15 @@ class MenusList:
         Printing the base64 encoding and decoding sub menu list
         '''
 
-        print(" ")
-        print(" Base64 Encoding And Decoding")
-        print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
-        print(" [1] Encoding From File")
-        print(" [2] Decoding From File")
-        print(" [3] Encoding From String")
-        print(" [4] Decoding From String")
-        print(" [9] Back To Main Menu")
-        print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" Base64 Encoding And Decoding")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" [1] Encoding From File")
+        print(f" [2] Decoding From File")
+        print(f" [3] Encoding From String")
+        print(f" [4] Decoding From String")
+        print(f" [9] Back To Main Menu")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
 
     @staticmethod
     def bin():
@@ -48,13 +48,13 @@ class MenusList:
         Printing the 8bit binary encoding and decoding sub menu list
         '''
 
-        print(" ")
-        print(" Base64 Encoding And Decoding")
-        print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
-        print(" [1] Encoding From File:")
-        print(" [2] Decoding From File:")
-        print(" [9] Back To Main Menu:")
-        print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" Base64 Encoding And Decoding")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" [1] Encoding From File:")
+        print(f" [2] Decoding From File:")
+        print(f" [9] Back To Main Menu:")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
 
 class Tools():
     
