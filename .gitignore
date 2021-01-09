@@ -11,3 +11,8 @@ testfiles
 *.log
 *.txt
 *dev.py
+
+## Around Build
+build
+dist
+*.spec
