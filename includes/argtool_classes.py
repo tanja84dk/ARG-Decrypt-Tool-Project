@@ -77,7 +77,8 @@ class Tools():
     def timeStamp():
         '''
         Returning a timestamp of the pc's date and time.
-        Timestamp is created like this 20201216_184216 and used as prefix for output files
+        Timestamp is created like this 20201216_184216 and used as prefix for \
+        output files
         '''
 
         return datetime.now().strftime("%Y%m%d_%H%M%S")

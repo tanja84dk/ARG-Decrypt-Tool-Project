@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 
 def remove_ext(fileinput):
-    """Removing everything from the last . till the end of the string"""
+    '''
+    Removing everything after the last period in the string
+    '''
     filename = '.'.join(fileinput.split(".")[:-1])
     return filename
 
 def try_read_file(filename):
-    """Trying to read the file content"""
+    '''
+    Trying to read the file content
+    '''
     try:
         with open(filename, 'r') as file_in:
             Lines = file_in.read()
