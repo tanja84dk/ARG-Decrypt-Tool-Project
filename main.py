@@ -100,7 +100,7 @@ if __name__ == '__main__':
                 choice_submenu_bin = 0
 
         elif main_menu_choise == 9:
-            quit()
+            break
 
         else:
             print("Invalid Option")
