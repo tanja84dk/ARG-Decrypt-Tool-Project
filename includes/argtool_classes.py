@@ -97,10 +97,17 @@ class Tools():
             return False
     
     @staticmethod
+    def wait():
+        input(f"Press Enter To Go Back To Main Menu")
+
+    @staticmethod
     def argtoolVersion():
-        with open(".version", 'r') as ver:
-            ver = ver.readline()
-        return ver
+        try:
+            with open(".version", 'r') as ver:
+                ver = ver.readline()
+            return ver
+        except FileNotFoundError:
+            return str(f'v0.3.0-dev')
 
 class Crypt():
     '''
