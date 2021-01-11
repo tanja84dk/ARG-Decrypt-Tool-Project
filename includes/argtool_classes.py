@@ -3,6 +3,21 @@
 ## Includes
 from datetime import datetime
 
+# My Include Files
+from includes.argtool_classes import Tools as argtools
+
+class Debug():
+
+    def __init__(self):
+        pass
+
+    def writeLog(self, logfile, logMessage):
+        '''
+        Place Holder
+        '''
+        with open(logfile, 'a+') as logWriter:
+            logWriter.write(f"{argtools.timeStamp()} - {argtools.argtoolVersion()} - {logMessage}\n")
+
 class MenusList:
     '''
     Static class there only is used to print the menus
@@ -15,7 +30,7 @@ class MenusList:
         Printing the main menu list
         '''
 
-        print(f" ")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
         print(f" ARG Encrypt And Decrypt Tool")
         print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
         print(f" [1] Base64")
@@ -32,15 +47,15 @@ class MenusList:
         Printing the base64 encoding and decoding sub menu list
         '''
 
-        print(" ")
-        print(" Base64 Encoding And Decoding")
-        print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
-        print(" [1] Encoding From File")
-        print(" [2] Decoding From File")
-        print(" [3] Encoding From String")
-        print(" [4] Decoding From String")
-        print(" [9] Back To Main Menu")
-        print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" Base64 Encoding And Decoding")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" [1] Encoding From File")
+        print(f" [2] Decoding From File")
+        print(f" [3] Encoding From String")
+        print(f" [4] Decoding From String")
+        print(f" [9] Back To Main Menu")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
 
     @staticmethod
     def bin():
@@ -48,13 +63,13 @@ class MenusList:
         Printing the 8bit binary encoding and decoding sub menu list
         '''
 
-        print(" ")
-        print(" Base64 Encoding And Decoding")
-        print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
-        print(" [1] Encoding From File:")
-        print(" [2] Decoding From File:")
-        print(" [9] Back To Main Menu:")
-        print(" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" Base64 Encoding And Decoding")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
+        print(f" [1] Encoding From File:")
+        print(f" [2] Decoding From File:")
+        print(f" [9] Back To Main Menu:")
+        print(f" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯")
 
 class Tools():
     
@@ -77,7 +92,8 @@ class Tools():
     def timeStamp():
         '''
         Returning a timestamp of the pc's date and time.
-        Timestamp is created like this 20201216_184216 and used as prefix for output files
+        Timestamp is created like this 20201216_184216 and used as prefix for \
+        output files
         '''
 
         return datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -92,16 +108,26 @@ class Tools():
                 return Lines
         except FileNotFoundError:
             print("File Not Found")
-            input("Press Enter To Go Back To Main Menu")
+            Tools.pause("Press Enter To Go Back To Main Menu")
             return False
     
     @staticmethod
+    def pause(message):
+        input(f"{ message }")
+
+    @staticmethod
     def argtoolVersion():
-        with open(".version", 'r') as ver:
-            ver = ver.readline()
-        return ver
+        try:
+            with open(".version", 'r') as ver:
+                ver = ver.readline()
+            return ver
+        except FileNotFoundError:
+            return str(f"v0.3.0-dev")
 
 class Crypt():
+    '''
+    Working on getting the encrypt and decrypt added in here prober 
+    '''
 
     def __init__(self):
         pass

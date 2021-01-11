@@ -6,22 +6,15 @@ import datetime
 
 # My Include Files
 from includes.argtool_classes import MenusList as Menus # Importing the Print Menu classes
-from includes.argtool_classes import Tools as argTools
+from includes.argtool_classes import Tools as argTools # Importing the Tool classes
 from includes import argtool_binary8bit, argtool_base64, argtool_common_funcs
 
 # Global Variables
 errorLog = "argtool.error.log"
-argver = ".version"
-
-def argtoolVersion():
-    with open(argver, 'r') as ver:
-        ver = ver.readline()
-    return ver
-
 
 def logToFile(logfile, logMessage):
             with open(logfile, 'a+') as logWriter:
-                logWriter.write(f"{argTools.timeStamp()} - {argtoolVersion()} - {logMessage}\n")
+                logWriter.write(f"{argTools.timeStamp()} - {argTools.argtoolVersion()} - {logMessage}\n")
 
 
 if __name__ == '__main__':
@@ -107,7 +100,7 @@ if __name__ == '__main__':
                 choice_submenu_bin = 0
 
         elif main_menu_choise == 9:
-            quit()
+            break
 
         else:
             print("Invalid Option")
