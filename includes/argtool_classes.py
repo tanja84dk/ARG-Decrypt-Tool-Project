@@ -3,6 +3,21 @@
 ## Includes
 from datetime import datetime
 
+# My Include Files
+from includes.argtool_classes import Tools as argtools
+
+class Debug():
+
+    def __init__(self):
+        pass
+
+    def writeLog(self, logfile, logMessage):
+        '''
+        Place Holder
+        '''
+        with open(logfile, 'a+') as logWriter:
+            logWriter.write(f"{argtools.timeStamp()} - {argtools.argtoolVersion()} - {logMessage}\n")
+
 class MenusList:
     '''
     Static class there only is used to print the menus
@@ -107,7 +122,7 @@ class Tools():
                 ver = ver.readline()
             return ver
         except FileNotFoundError:
-            return str(f'v0.3.0-dev')
+            return str(f"v0.3.0-dev")
 
 class Crypt():
     '''
