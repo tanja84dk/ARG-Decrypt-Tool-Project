@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# My Include Files
+from includes.argtool_classes import Tools as argtools
+
 def remove_ext(fileinput):
     '''
     Removing everything after the last period in the string
@@ -20,7 +23,7 @@ def try_read_file(filename):
             return Lines
     except FileNotFoundError:
         print("File Not Found")
-        input("Press Enter To Go Back To Main Menu")
+        argtools.pause("Press Enter To Go Back To Main Menu")
         return False
 
 # Future Proof for only running if this file is run

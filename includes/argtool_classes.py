@@ -93,12 +93,12 @@ class Tools():
                 return Lines
         except FileNotFoundError:
             print("File Not Found")
-            input("Press Enter To Go Back To Main Menu")
+            Tools.pause("Press Enter To Go Back To Main Menu")
             return False
     
     @staticmethod
-    def wait():
-        input(f"Press Enter To Go Back To Main Menu")
+    def pause(message):
+        input(f"{ message }")
 
     @staticmethod
     def argtoolVersion():

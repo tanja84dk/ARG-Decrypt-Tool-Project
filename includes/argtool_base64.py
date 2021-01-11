@@ -2,6 +2,8 @@
 
 import base64
 import datetime
+
+# My Include Files
 from includes import argtool_common_funcs as argfunc # Importing My Shared Functions
 from includes.argtool_classes import Tools as argtools # Importing My Tool Class
 
@@ -15,7 +17,7 @@ def try_read_file2(filename):
             return Lines
     except FileNotFoundError:
         print("File Not Found")
-        argtools.wait()
+        argtools.pause("Press Enter To Go Back To Main Menu")
         return False
 
 def encode_file_base64(input_file, output_file):
@@ -33,7 +35,7 @@ def encode_file_base64(input_file, output_file):
         with open(now + '-' + output_file, 'w') as base64_encoded:
             base64_encoded.write(message)
         print(f"The encoded message is saved in a file called { now }-{ output_file }")
-        argtools.wait()
+        argtools.pause("Press Enter To Go Back To Main Menu")
 
 def encode_input_base64(plain_text, output_file):
     '''
@@ -48,7 +50,7 @@ def encode_input_base64(plain_text, output_file):
     with open(now + '-' + output_file, 'w') as base64_input_encode:
         base64_input_encode.write(base64_message)
     print(f"The encoded message is saved in a file called { now }-{ output_file }")
-    argtools.wait()
+    argtools.pause("Press Enter To Go Back To Main Menu")
 
 def decode_file_base64(input_file, output_file):
     '''
@@ -67,7 +69,7 @@ def decode_file_base64(input_file, output_file):
             with open(now + '-' + output_file, 'w') as base64_decoded:
                 base64_decoded.write(message)
         print(f"The decoded message is saved in a file called { now }-{ output_file }")
-        argtools.wait()
+        argtools.pause("Press Enter To Go Back To Main Menu")
 
 def decode_input_base64(string_input, output_file):
     '''
@@ -82,7 +84,7 @@ def decode_input_base64(string_input, output_file):
     with open(now + '-' + output_file, 'w') as base64_input_decoded:
             base64_input_decoded.write(message)
     print(f"The decoded message is saved in a file called { now }-{ output_file }")
-    argtools.wait()
+    argtools.pause("Press Enter To Go Back To Main Menu")
 
 # Future Proof for only running if this file is run
 if __name__ == '__main__':
