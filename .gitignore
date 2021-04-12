@@ -6,11 +6,9 @@ gen
 .vscode
 .venv
 __pycache__
-dev
 testfiles
 *.log
 *.txt
-*dev.py
 
 ## Around Build
 build
