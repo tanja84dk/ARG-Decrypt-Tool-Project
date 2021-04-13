@@ -243,7 +243,7 @@ if __name__ == '__main__':
                 # Encoding From File
                 print("Input Filename: ")
                 encoder_plain = input("Type the full file name, has to end with .txt and no spaces: ")
-                argtool_base64.encode_file_base64(encoder_plain, f"base64_encoded-{ (argTools.remove_ext(encoder_plain)) }.txt")
+                encryption.encode_file_base64(encoder_plain, f"base64_encoded-{ (argTools.remove_ext(encoder_plain)) }.txt")
                 choice_submenu_base64 = 0
             
             elif choice_submenu_base64 == 2:
