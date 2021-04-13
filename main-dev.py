@@ -6,9 +6,6 @@ from datetime import datetime
 import base64
 import logging
 
-# My Include Files
-# from includes import argtool_binary8bit, argtool_base64, argtool_common_funcs
-
 # Global Variables
 debug = False
 errorLog = "argtool.error.log"
