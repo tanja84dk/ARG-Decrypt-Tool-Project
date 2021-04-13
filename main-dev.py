@@ -10,6 +10,7 @@ import logging
 # from includes import argtool_binary8bit, argtool_base64, argtool_common_funcs
 
 # Global Variables
+debug = False
 errorLog = "argtool.error.log"
 
 class menus():
@@ -261,7 +262,6 @@ if __name__ == '__main__':
                 encoded_man_input = input("String to encode: ")
                 encryption.encode_input_base64(encoded_man_input, 'base64_encoded_output.txt')
                 choice_submenu_base64 = 0
-                input("\n\n Press Enter To Contiue: ")
 
 
             elif choice_submenu_base64 == 4:
