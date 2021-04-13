@@ -70,17 +70,17 @@ class argTools():
     def __init__(self):
         pass
 
-    def remove_ext(fileinput):
+    def remove_ext(fileInput):
         '''
         Removing everything from the last . till the end of the string
         will return input filename if no . is located
         '''
         
-        filename = '.'.join(fileinput.split(".")[:-1])
+        filename = '.'.join(fileInput.split(".")[:-1])
         if len(filename) >= 1:
             return filename
         else:
-            return fileinput
+            return fileInput
 
     @staticmethod
     def timestamp():
@@ -128,24 +128,24 @@ class encryption():
     def bits2string(b=None):
         return ''.join([chr(int(x, 2)) for x in b])
 
-    def encode_file_base64(input_file, output_file):
+    def encode_file_base64(inputFile, outputFile):
         '''
-        Plain Text is the indput, and output_file is output filename.
+        Plain Text is the indput, and outputFile is output filename.
         Output file is prepended with date and time added to avoid overwrite
         '''    
-        if argTools.try_read_file(input_file) != False:
+        if argTools.try_read_file(inputFile) != False:
             now = argTools.timestamp() # Timestamp Creation
-            pre_encode_message = argTools.try_read_file(input_file)
+            pre_encode_message = argTools.try_read_file(inputFile)
             # pre_encode_message = pre_encode.read()
             pre_encode_bytes = pre_encode_message.encode('ascii')
             message_bytes = base64.b64encode(pre_encode_bytes)
             message = message_bytes.decode('ascii')
-            with open(now + '-' + output_file, 'w') as base64_encoded:
+            with open(now + '-' + outputFile, 'w') as base64_encoded:
                 base64_encoded.write(message)
-            print(f"The encoded message is saved in a file called { now }-{ output_file }")
+            print(f"The encoded message is saved in a file called { now }-{ outputFile }")
             argTools.pause("Press Enter To Go Back To Main Menu")
 
-    def encode_input_base64(plain_text, output_file):
+    def encode_input_base64(plain_text, outputFile):
         '''
         Plain Text is the indput.
         Output file is prepended with date and time added to avoid overwrite
@@ -155,68 +155,72 @@ class encryption():
         message_bytes = pre_encode_message.encode('ascii')
         base64_bytes = base64.b64encode(message_bytes)
         base64_message = base64_bytes.decode('ascii')
-        with open(now + '-' + output_file, 'w') as base64_input_encode:
+        with open(now + '-' + outputFile, 'w') as base64_input_encode:
             base64_input_encode.write(base64_message)
-        print(f"The encoded message is saved in a file called { now }-{ output_file }")
+        print(f"The encoded message is saved in a file called { now }-{ outputFile }")
         argTools.pause("Press Enter To Go Back To Main Menu")
 
-    def decode_file_base64(input_file, output_file):
+    def decode_file_base64(inputFile, outputFile):
         '''
         Base64 encoded text file is input.
         Output file is prepended with date and time added to avoid overwrite
         '''
-        #if try_read_file2(input_file) != False:
-        if argTools.try_read_file(input_file) != False:
+        #if try_read_file2(inputFile) != False:
+        if argTools.try_read_file(inputFile) != False:
             now = argTools.timestamp() # Timestamp Creation
-            # base64_encoded = argtools.try_read_file(input_file)
-            with open(input_file, 'r') as base64_encoded:
+            # base64_encoded = argtools.try_read_file(inputFile)
+            with open(inputFile, 'r') as base64_encoded:
                 base64_message = base64_encoded.readline().rstrip()
                 base64_bytes = base64_message.encode('ascii').rstrip()
                 message_bytes = base64.b64decode(base64_bytes)
                 message = message_bytes.decode('ascii')
-                with open(now + '-' + output_file, 'w') as base64_decoded:
+                with open(now + '-' + outputFile, 'w') as base64_decoded:
                     base64_decoded.write(message)
-            print(f"The decoded message is saved in a file called { now }-{ output_file }")
+            print(f"The decoded message is saved in a file called { now }-{ outputFile }")
             argTools.pause("Press Enter To Go Back To Main Menu")
 
-    def decode_input_base64(string_input, output_file):
+    def decode_input_base64(inputString, outputFile):
         '''
         Base64 encoded text is the input from string.
         Output file is prepended with date and time added to avoid overwrite
         '''
         now = argTools.timestamp() # Timestamp Creation
-        base64_message = string_input
+        base64_message = inputString
         base64_bytes = base64_message.encode('ascii')
         message_bytes = base64.b64decode(base64_bytes)
         message = message_bytes.decode('ascii')
-        with open(now + '-' + output_file, 'w') as base64_input_decoded:
+        with open(now + '-' + outputFile, 'w') as base64_input_decoded:
                 base64_input_decoded.write(message)
-        print(f"The decoded message is saved in a file called { now }-{ output_file }")
+        print(f"The decoded message is saved in a file called { now }-{ outputFile }")
         argTools.pause("Press Enter To Go Back To Main Menu")
 
-    def encode_file_8bit(fileinput, fileoutput):
-        """Plain Text is the indput, and output_file is output filename.
+    def encode_file_8bit(inputFile, outputFile):
+        """Plain Text is the indput, and outputFile is output filename.
         Output file is prepended with date and time added to avoid overwrite"""
-        if argTools.try_read_file(fileinput) != False:
+        if argTools.try_read_file(inputFile) != False:
             now = argTools.timestamp() # Timestamp Creation
-            Lines = argTools.try_read_file(fileinput)
+            Lines = argTools.try_read_file(inputFile)
             file_in_temp = encryption.string2bits(Lines)
-            with open(now + "-" + fileoutput, 'a+') as writefile:
+            with open(now + "-" + outputFile, 'a+') as writefile:
                 writefile.write(str(' ').join(file_in_temp))
+            print(f"The encoded message is saved in a file called { now }-{ outputFile }")
+            argTools.pause("Press Enter To Go Back To Main Menu")
 
-    def decode_file_8bit(fileinput, fileoutput):
+    def decode_file_8bit(inputFile, outputFile):
         """8Bit binary ASCII encoded text file is input.
         Output file is prepended with date and time added to avoid overwrite"""
-        if argTools.try_read_file(fileinput) != False:
+        if argTools.try_read_file(inputFile) != False:
             now = argTools.timestamp() # Timestamp Creation
-            Lines = argTools.try_read_file(fileinput)
+            Lines = argTools.try_read_file(inputFile)
             file_in_temp = list(Lines.split("\n\n"))
             for line in file_in_temp:
                 file_in_temp = line.replace(" ", "\n")
                 file_in_temp = list(file_in_temp.split("\n"))
                 text_out = encryption.bits2string(file_in_temp)
-                with open(now + "-" + fileoutput, 'a+') as writefile:
+                with open(now + "-" + outputFile, 'a+') as writefile:
                     writefile.write(text_out + "\n\n")
+                print(f"The decoded message is saved in a file called { now }-{ outputFile }")
+                argTools.pause("Press Enter To Go Back To Main Menu")
 
 def logToFile(logfile, logMessage):
             with open(logfile, 'a+') as logWriter:
